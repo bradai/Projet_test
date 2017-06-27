@@ -8,8 +8,8 @@ A Symfony project created on June 21, 2017, 11:10 am.
 Clone project :
 ---------------
 
-      git clone https://github.com/bradai/projet_test.git
-      cd projet_test
+      git clone https://github.com/bradai/Projet_test.git
+      cd Projet_test
       composer install or composer update
 
 Step for install Project :
