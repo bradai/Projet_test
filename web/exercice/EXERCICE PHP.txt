@@ -1,0 +1,13 @@
+IMPORT DE PRIX FIOUL
+====================
+1. Créer une commande symfony afin d'extraire les prix moyen de fioul et les stocker en base de donnée (fichier CSV ci joint)
+2. créer une API REST afin d'extraire des prix d'un ID code postal entre 2 dates
+
+
+PRES REQUIS
+===========
+Utiliser le framework symfony 2.8 et >
+Utiliser doctrine
+L'import de données CV doit être le plus rapide possible (attention aux performances)
+Faire des tests unitaires (sauf pour l'import de fichier)
+Utiliser un repository GIT et nous envoyer le lien

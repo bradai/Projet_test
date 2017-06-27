@@ -1,0 +1,16 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+
+app_rest:
+    type:     rest
+    prefix:   /api/v1
+    resource: "@AppBundle/Controller/Api"
+    type:     annotation
+    defaults:
+      _format:  json
+
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

@@ -1,0 +1,131 @@
+<?php
+
+/*
+ * This file is part of puppets-poop-pee.
+ *
+ * (c) Sedona <http://www.sedona.fr/>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace AppBundle\Entity;
+
+use Doctrine\Common\Collections\ArrayCollection;
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\FioulRepository")
+
+ */
+class Fioul
+{
+
+    /**
+     * @ORM\Id;
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $code_postal;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $amount;
+
+
+    /**
+     * @ORM\Column(type="date")
+     */
+
+    protected $date;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $amount
+     *
+     * @return $this
+     */
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAmount()
+    {
+        return $this->amount;
+    }
+
+    /**
+     * @param mixed $code_postal
+     *
+     * @return $this
+     */
+    public function setCodePostal($code_postal)
+    {
+        $this->code_postal = $code_postal;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCodePostal()
+    {
+        return $this->code_postal;
+    }
+
+    /**
+     * @param mixed $date
+     *
+     * @return $this
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+
+
+
+
+    public function __construct()
+    {
+
+    }
+}
